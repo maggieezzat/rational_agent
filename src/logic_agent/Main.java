@@ -36,10 +36,10 @@ public class Main {
 		
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter("KB.pl"));
-			writer.write("iMan(" + ix + "," + iy + "," + m + "," + n + ")." + "\n");
+			writer.write("iMan(" + ix + "," + iy + "," + m + "," + n +",S0" +")." + "\n");
 			writer.write("thanos(" + tx + "," + ty + "," + m + "," + n + ")." + "\n");
 			for(int i=0; i < stones.length-1; i+=2)
-				writer.write("isStone(" + stones[i] + "," + stones[i+1] + "," + m + "," + n  + ")." + "\n");
+				writer.write("isStone(" + stones[i] + "," + stones[i+1] + "," + m + "," + n +",S0"+ ")." + "\n");
 			writer.close();
 			
 			
