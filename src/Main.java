@@ -1,4 +1,4 @@
-package logic_agent;
+
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -35,11 +35,12 @@ public class Main {
 		
 		
 		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter("KB.pl"));
-			writer.write("iMan(" + ix + "," + iy + "," + m + "," + n +",S0" +")." + "\n");
-			writer.write("thanos(" + tx + "," + ty + "," + m + "," + n + ")." + "\n");
+			BufferedWriter writer = new BufferedWriter(new FileWriter("kB.pl"));
+			writer.write("grid("+m+","+n+"). \n");
+			writer.write("iMan(" + ix + "," + iy + ",s0). \n");
+			writer.write("thanos(" + tx + "," + ty + "). \n");
 			for(int i=0; i < stones.length-1; i+=2)
-				writer.write("isStone(" + stones[i] + "," + stones[i+1] + "," + m + "," + n +",S0"+ ")." + "\n");
+				writer.write("isStone(" + stones[i] + "," + stones[i+1] + ",s0). \n");
 			writer.close();
 			
 			
