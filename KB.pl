@@ -1,4 +1,4 @@
-isSituation(s0).
+
 grid(5,5). 
 iMan(1,2,s0). 
 thanos(3,4). 
