@@ -1,4 +1,4 @@
-%:-[kB].
+:-[kB].
 /*
  * true tests:
  * snapped(result(snap,result(right,result(collect,result(down,result(right,result(collect,result(right,result(collect,result(down,result(collect,result(left,s0))))))))))))).
@@ -8,20 +8,6 @@
  * right, collect, down, left, left, right, right, right, collect, right, collect, down, collect, left
  * snapped(result(snap,result(right,result(collect,result(down,result(right,result(collect,result(right,result(collect,result(down,result(collect,result(left,result(collect,s0)))))))))))))).
  */
-% grid(2,2). 
-% iMan(0,1,s0). 
-% thanos(1,0). 
-% isStone(0,1,s0). 
-% isStone(1,1,s0). 
-% isStone(1,0,s0).
-% isStone(0,0,s0).
-grid(5,5). 
-iMan(1,2,s0). 
-thanos(3,4). 
-isStone(1,1,s0). 
-isStone(2,1,s0). 
-isStone(2,2,s0). 
-isStone(3,3,s0).
 
 isCell(X,Y):-
     grid(M,N),
