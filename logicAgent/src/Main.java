@@ -1,9 +1,6 @@
-
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.LinkedList;
 
 public class Main {
 	
@@ -36,11 +33,10 @@ public class Main {
 		
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter("kB.pl"));
-			writer.write("grid("+m+","+n+"). \n");
-			writer.write("iMan(" + ix + "," + iy + ",s0). \n");
-			writer.write("thanos(" + tx + "," + ty + "). \n");
+			writer.write("iMan(" + ix + "," + iy + "," + m + "," + n +",S0" +")." + "\n");
+			writer.write("thanos(" + tx + "," + ty + "," + m + "," + n + ")." + "\n");
 			for(int i=0; i < stones.length-1; i+=2)
-				writer.write("isStone(" + stones[i] + "," + stones[i+1] + ",s0). \n");
+				writer.write("isStone(" + stones[i] + "," + stones[i+1] + "," + m + "," + n +",S0"+ ")." + "\n");
 			writer.close();
 			
 			
@@ -57,17 +53,9 @@ public class Main {
 	public static void main(String [] args) {
 		
 		
-		GenGrid("5,5;1,2;3,4;1,1,2,1,2,2,3,3");
+		GenGrid("5,5;1,2;3,4;3,1,2,1,2,2,3,2");
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 
 }
