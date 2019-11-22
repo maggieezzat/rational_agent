@@ -1,13 +1,4 @@
-:-[kB].
-/*
- * true tests:
- * snapped(result(snap,result(right,result(collect,result(down,result(right,result(collect,result(right,result(collect,result(down,result(collect,result(left,s0))))))))))))).
- * snapped(result(snap,result(right,result(collect,result(left,result(down,result(right,result(right,result(collect,result(right,result(collect,result(down,result(collect,result(left,s0)))))))))))))).
- * 
- * false tests:
- * right, collect, down, left, left, right, right, right, collect, right, collect, down, collect, left
- * snapped(result(snap,result(right,result(collect,result(down,result(right,result(collect,result(right,result(collect,result(down,result(collect,result(left,result(collect,s0)))))))))))))).
- */
+:- include('kB.pl').
 
 isCell(X,Y):-
     grid(M,N),
